@@ -30,3 +30,7 @@ const app = new App(
 )
 
 app.render()
+
+if (import.meta.hot) {
+  console.log(import.meta.hot)
+}

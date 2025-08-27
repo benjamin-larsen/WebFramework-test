@@ -9,7 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "vite-plugin-inspect": "^11.3.3"
   },
   "dependencies": {
     "path-to-regexp": "^8.2.0",

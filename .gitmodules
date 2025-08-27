@@ -1,0 +1,3 @@
+[submodule "WebFramework"]
+	path = WebFramework
+	url = https://github.com/benjamin-larsen/WebFramework.git
