@@ -31,6 +31,8 @@ const app = new App(
 
 app.render()
 
+window.app = app
+
 if (import.meta.hot) {
   console.log(import.meta.hot)
 }

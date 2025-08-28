@@ -1,14 +1,23 @@
 import { v } from "webframework";
 import { routeState } from "../services/router";
 
-export default function render(props) {
-    if (routeState.currentRoute) {
-        if (routeState.currentRoute.component) {
-            return routeState.currentRoute.component(props)
+export default {
+    render(props) {
+        console.log(routeState)
+        if (routeState.currentRoute) {
+            if (routeState.currentRoute.component) {
+                return [
+                    v(routeState.currentRoute.component)
+                ]
+            }
+
+            return [
+                null
+            ];
         }
 
-        return [];
-    }
-
-    return [v("div", "Fatal Error: No Route Found.")];
-} 
+        return [
+            v("div", "Fatal Error: No Route Found.")
+        ];
+    } 
+}

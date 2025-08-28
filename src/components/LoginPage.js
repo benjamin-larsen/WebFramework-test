@@ -1,5 +1,7 @@
 import { v } from "webframework";
 
-export default function render() {
-    return [v("div", "login")];
-} 
+export default {
+    render() {
+        return [v("div", "login")];
+    } 
+}

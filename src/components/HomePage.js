@@ -6,10 +6,10 @@ function onclick() {
     count.value++;
 }
 
-export default function render() {
-    return [
-        v("button", { onclick }, `Click me : ${count.value}`)
-    ];
-} 
-
-console.log(import.meta, export.meta)
+export default {
+    render() {
+        return [
+            v("button", { onclick }, `Click me : ${count.value}`)
+        ];
+    } 
+}
