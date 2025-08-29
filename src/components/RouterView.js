@@ -3,11 +3,14 @@ import { routeState } from "../services/router";
 
 export default {
     render(props) {
-        console.log(routeState)
         if (routeState.currentRoute) {
-            if (routeState.currentRoute.component) {
+            if (typeof routeState.currentRoute.component === "object") {
                 return [
                     v(routeState.currentRoute.component)
+                ]
+            } else if (typeof routeState.currentRoute.component === "function") {
+                return [
+                    v("Lazy", { loadFunc: routeState.currentRoute.component })
                 ]
             }
 
