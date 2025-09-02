@@ -1,6 +1,7 @@
-import { v, reactive } from "webframework";
+import { v, ref } from "webframework";
 
-const count = reactive({ value: 0 })
+const count = ref(0)
+const loaded = new Date()
 
 function onclick() {
     count.value++;
@@ -9,6 +10,7 @@ function onclick() {
 export default {
     render() {
         return [
+            v("div", { style: "color: #fff" }, `Hello this page was staticly imported on ${loaded.toString()}`),
             v("button", { onclick }, `Click me : ${count.value}`)
         ];
     } 

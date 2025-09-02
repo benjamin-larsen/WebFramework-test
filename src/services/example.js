@@ -1,3 +1,3 @@
-import { reactive } from "webframework";
+import { ref } from "webframework";
 
-export const WebTitle = reactive({ value: "Silly Ahh Site" })
+export const WebTitle = ref("Silly Ahh Site")

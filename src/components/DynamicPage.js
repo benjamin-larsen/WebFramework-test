@@ -1,6 +1,6 @@
 import { v } from "webframework";
 
-const loaded = Date.now()
+const loaded = new Date()
 
 export default {
     render() {
