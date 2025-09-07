@@ -21,6 +21,10 @@ router.registerRoutes([
         component: () => import("./components/DynamicPage.js")
     },
     {
+        path: "/dynamic2",
+        component: () => import("./components/Dynamic2.js")
+    },
+    {
         path: "*_",
         redirect: "/"
     }
